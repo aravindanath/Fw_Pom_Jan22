@@ -45,31 +45,39 @@ public class RegisterPage  extends BaseClass{
     @FindBy(xpath = "//input[@class='btn btn-primary']")
     WebElement continueButton;
 
+    @FindBy(xpath = "(//a[text()='Logout'])[1]")
+    WebElement logoutButton;
 
-    public void navigateToRegisterPage(){
+
+    public void navigateToRegisterPage() throws InterruptedException {
         myAccountMenu.click();
+        Thread.sleep(3000);
         registerMenu.click();
     }
 
 
     public void verifyRegisteringAccountByProvidingOnlyMandatoryFields(String fn, String ln, String email, String telephone, String password,String confirmPassword) throws InterruptedException {
         firstNameTextField.sendKeys(fn);
-        Thread.sleep(3000);
+//        Thread.sleep(3000);
         lastNameTextField.sendKeys(ln);
-        Thread.sleep(3000);
+//        Thread.sleep(3000);
         emailTextField.sendKeys(email);
-        Thread.sleep(3000);
+//        Thread.sleep(3000);
         telephoneTextField.sendKeys(telephone);
-        Thread.sleep(3000);
+//        Thread.sleep(3000);
         passwordTextField.sendKeys(password);
-        Thread.sleep(3000);
+//        Thread.sleep(3000);
         confirmPasswordText.sendKeys(confirmPassword);
-        Thread.sleep(3000);
+//        Thread.sleep(3000);
         agreeCb.click();
         continueButton.click();
     }
 
 
-
+    public void logout() throws InterruptedException {
+        myAccountMenu.click();
+        Thread.sleep(3000);
+        logoutButton.click();
+    }
 
 }

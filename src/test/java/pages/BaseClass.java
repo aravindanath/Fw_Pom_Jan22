@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.util.Locale;
 import java.util.Properties;
 
 public class BaseClass {
@@ -94,8 +95,8 @@ public class BaseClass {
     }
 
     public static String email(){
-        Faker faker = new Faker();
-        String ln =  faker.name().lastName()+"@testmail.com";
+        Faker faker = new Faker(new Locale("en-US"));
+        String ln =  faker.name().fullName().replace(" ","")+telephoneNumber()+"@testmail.com";
         return ln;
     }
 
