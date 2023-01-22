@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <test verbose="2" preserve-order="true"
-          name="AUTOMATION TEST CASES">
-        <classes>
-            <class name="testscripts.TC_RF_001"/>
-
-        </classes>
-    </test>
+<suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/Users/LENOVO/IdeaProjects/Fw_Pom_Jan22/src/test/java/testscripts">
+    <classes>
+        <class name="testscripts.TC_LF_001">
+            <methods><include name="TC_LF_001"/>
+            </methods>
+        </class>
+        <class name="testscripts.TC_RF_001">
+            <methods><include name="TC_RF_001"/>
+            </methods>
+        </class>
+    </classes>
+</test>
 </suite>
