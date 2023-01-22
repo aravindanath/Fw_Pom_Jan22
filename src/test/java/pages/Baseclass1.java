@@ -85,8 +85,8 @@ public class Baseclass1 {
             return value;
         }
 
-    public static String emailid
-            (){
+    public static String emailid()
+    {
         Faker faker = new Faker(new Locale("en-US"));
         String ln =  faker.name().fullName().replace(" ","")+telephoneNumber()+"@testmail.com";
         return ln;
